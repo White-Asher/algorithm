@@ -14,7 +14,7 @@ for i in range(N):
             print(' ', end='')
 
 # List 내부에서 제공하는 기능을 이용한 풀이
-N=int(input())
+M=int(input())
 
 for i in range(N):
     string=list(input().split())
