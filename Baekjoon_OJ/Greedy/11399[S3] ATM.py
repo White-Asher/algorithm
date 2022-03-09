@@ -1,6 +1,10 @@
-from collections import deque
-indiSaram = deque()
 saram = int(input())
-indiSaram = map(int,input().split(" "))
-
-print(indiSaram)
+indiSaram = list(map(int,input().split()))
+indiSaram.sort()
+sum = 0
+temp = 0
+for i in indiSaram:
+    temp += i
+    sum += temp
+    
+print(sum)
