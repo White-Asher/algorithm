@@ -1,11 +1,24 @@
-from collections import deque
-# from unicodedata import name
-n = int(input())
-# rope = deque()
-for i in range(n):
-    # rope.append(int(input()))
-    a = int(input())
-    if temp_min >= a:
-        temp_min = a
+#  1차 시도
+# n = int(input())
+# rope = []
+# for i in range(n):
+#     rope.append(int(input()))
+# rope.sort(reverse=True)
+# if len(rope) >=2 :
+#     print(int((rope[0]+rope[1])/2))
+# else:
+#     print(rope[0])
 
-print(temp_min*n)
+
+# 2차 시도
+def solution():
+    n = int(input())
+    rope = []
+    for i in range(n):
+        rope.append(int(input()))
+    rope.sort(reverse=True)
+    for j in range(n):
+        rope[j] = rope[j] * (j+1)
+    return max(rope)
+
+print(solution())
