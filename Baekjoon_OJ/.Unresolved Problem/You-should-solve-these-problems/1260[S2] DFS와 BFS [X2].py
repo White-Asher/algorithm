@@ -1,5 +1,6 @@
 # 1260 DFS/BFS 
 from collections import deque
+# n: 정점의 개수, m: 간선의 개수, v:탐색을 시작할 정점의 번호
 n, m, v = map(int,input().split())
 
 graph = [[] for _ in range(n+1)]
