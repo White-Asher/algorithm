@@ -37,8 +37,6 @@ for seat in range(1, C*R+1):
             y += dy[direct]
 
 
-
-
 # 시도했던 답안(X)
 '''
 x,y = map(int,input().split())
