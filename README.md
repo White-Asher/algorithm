@@ -1,16 +1,6 @@
 # Prepare Coding Test
 
 ## Algorithm
-- [BFS/DFS]() 
+- [BFS/DFS](https://whitehairhan.tistory.com/204?category=1000781) 
+- [DP](https://whitehairhan.tistory.com/266?category=1000781)
 
-<hr>
-
-## Problem Solving
-
-### 그리디
-
-### 구현
-
-### DFS/BFS
-
-### 정렬
