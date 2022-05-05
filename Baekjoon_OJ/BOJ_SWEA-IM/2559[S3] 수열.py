@@ -1,3 +1,13 @@
+# 제출 답안
+n, k = map(int, input().split())
+num = list(map(int, input().split()))
+sum_num = sum(num[:k])
+result = sum_num
+for i in range(k,n):
+    sum_num += num[i] - num[i-k]
+    result = max(sum_num, result)
+print(result)
+
 # 처음 시도한 답
 # import sys
 # from collections import deque
@@ -12,16 +22,6 @@
 #         result += temp[j]
 #     seq_temp.append(result)
 # print(max(seq_temp))
-
-# 제출 답안
-n, k = map(int, input().split()) 
-arr = list(map(int, input().split())) 
-sum_arr = sum(arr[:k])
-result = sum_arr
-for i in range(k,n):
-    sum_arr += arr[i] - arr[i-k]
-    result = max(result, sum_arr)
-print(result)
 
 # 참고한 답
 # N, K = map(int, input().split()) 
