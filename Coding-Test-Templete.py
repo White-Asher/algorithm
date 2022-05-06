@@ -53,10 +53,10 @@ N, M = map(int, input().split())
 arr = [[0] * N for _ in range(M)]
 
 ## 배열에 찾고자 하는 원소 개수
-list.count(찾고자 하는 값)
+# list.count(찾고자 하는 값)
 
 ## 문자열에 찾고자 하는 문자열의 개수
-str.count(찾는 값) 
+# str.count(찾는 값)
 
 ## 1차원 리스트 원소 중복 제거
 alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'a', 'b', 'c', 'd' ] 
@@ -70,7 +70,7 @@ print(list(set(map(tuple, lst))))
 arr.sort(key=lambda x:(x[0], x[1]))
 
 ## 파이썬 삼항연산자
-[True 조건] if 조건 else [False 조건]
+# [True 조건] if 조건 else [False 조건]
 res = a if a > b else b
 
 ## 조합
