@@ -1,4 +1,4 @@
-# 왜 시간초과?
+# 시간초과(오답)
 import sys
 input = sys.stdin.readline
 n, m = map(int, input().split())
@@ -11,15 +11,15 @@ for i in range(n):
 for i in range(m):
     quest = input().rstrip()
     if quest.isdigit():
-        for key, value in poke.items():
+        for key, value in poke.items(): # 문제의 코드
             if key == int(quest):
                 print(value)
     else:
-        for key, value in poke.items():
+        for key, value in poke.items(): # 문제의 코드
             if str(value) == str(quest):
                 print(int(key))
 
-# 왜 애는 통과가 될까?
+# 통과
 import sys
 input = sys.stdin.readline
 n, m = map(int, input().split())

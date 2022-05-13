@@ -22,13 +22,3 @@ print(result)
 #         result += temp[j]
 #     seq_temp.append(result)
 # print(max(seq_temp))
-
-# 참고한 답
-# N, K = map(int, input().split()) 
-# arr = list(map(int, input().split())) 
-# tmp = sum(arr[:K]) 
-# result = tmp 
-# for i in range(K, N): 
-#     tmp += arr[i] - arr[i-K] 
-#     result = max(result, tmp) 
-# print(result)
