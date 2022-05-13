@@ -1,4 +1,6 @@
 # 제출한답
+import sys
+input = sys.stdin.readline
 n = int(input())
 info = [0] * 1001
 max_high = 0
