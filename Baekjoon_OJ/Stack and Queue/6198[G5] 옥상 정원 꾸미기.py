@@ -4,32 +4,35 @@ stk = []
 result = 0
 
 for i in range(n):
+    print(stk)
     while stk and stk[-1] <= arr[i]:
         stk.pop()
     stk.append(arr[i])
+    print(stk)
     result += len(stk) - 1
+    print('result',result)
 
 print(result)
 # 풀이 참고 https://velog.io/@inhibitor/Problem-Solving-%EC%98%A5%EC%83%81-%EC%A0%95%EC%9B%90-%EA%BE%B8%EB%AF%B8%EA%B8%B0
 # 풀이 참고2 https://lakelouise.tistory.com/62?category=1006962
 
 # 빠른 실행 풀이
-import sys
-n=int(sys.stdin.readline())
-stack=[]
-cnt=0
-for i in range(n):
-    a=int(sys.stdin.readline())
-    if stack==[]:
-        stack.append(a)
-    else:
-        while stack[-1]<=a:
-            stack.pop()
-            if stack==[]:
-                break
-        cnt+=len(stack)
-        stack.append(a)
-print(cnt)
+# import sys
+# n=int(sys.stdin.readline())
+# stack=[]
+# cnt=0
+# for i in range(n):
+#     a=int(sys.stdin.readline())
+#     if stack==[]:
+#         stack.append(a)
+#     else:
+#         while stack[-1]<=a:
+#             stack.pop()
+#             if stack==[]:
+#                 break
+#         cnt+=len(stack)
+#         stack.append(a)
+# print(cnt)
 
 # 시간초과
 # import sys
