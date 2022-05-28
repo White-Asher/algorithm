@@ -26,7 +26,7 @@ MAP = [list(map(int, input().split())) for _ in range(int(input()))]
 # 4 10 20 30 40
 # 3 7 5 12
 # 3 125 15 25
-N, *arr = map(int, input().split())
+# N, *arr = map(int, input().split())
 
 ## 문자열을 한 글자씩 배열에 저장
 # 3    
@@ -76,3 +76,6 @@ res = a if a > b else b
 ## 조합
 from itertools import combinations  
 print(list(combinations([1, 2, 3, 4], 3)))
+
+print("{:.6f}".format(40.123456789))
+40.123457
