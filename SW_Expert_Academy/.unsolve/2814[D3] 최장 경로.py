@@ -7,6 +7,7 @@ def dfs(idx,cnt):
         if not visit[i]:
             dfs(i,cnt+1)
             visit[i] = 0
+
 t = int(input())
 for tc in range(1, t+1):
     n,m = map(int,input().split())
