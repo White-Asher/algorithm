@@ -1,5 +1,0 @@
-n = int(input())
-data = list(map(int,input().split()))
-max_num = max(data)
-min_num = min(data)
-print(max_num*min_num)
