@@ -1,4 +1,4 @@
-package inflearnJavaCodingTest.array02_04fibo;
+package inflearnJavaCodingTest._02array._04fibo;
 
 import java.util.*;
 

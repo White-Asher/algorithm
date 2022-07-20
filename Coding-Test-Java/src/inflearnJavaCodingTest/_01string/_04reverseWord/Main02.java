@@ -1,4 +1,4 @@
-package inflearnJavaCodingTest.string01_04reverseWord;
+package inflearnJavaCodingTest._01string._04reverseWord;
 
 import java.util.ArrayList;
 import java.util.Scanner;

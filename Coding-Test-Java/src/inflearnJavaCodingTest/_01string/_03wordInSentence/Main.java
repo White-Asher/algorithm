@@ -1,4 +1,4 @@
-package inflearnJavaCodingTest.string01_03wordInSentence;
+package inflearnJavaCodingTest._01string._03wordInSentence;
 
 import java.util.*;
 
@@ -17,6 +17,7 @@ public class Main {
 		
 		// indexOf, subString 사용
 		int m = Integer.MIN_VALUE, pos;
+		
 		// 띄어쓰기를 발견 못하면 -1을 리턴, 발견하면 index번호 리턴
 		while((pos = str.indexOf(' ')) != -1) {
 			String tmp = str.substring(0, pos);
@@ -32,11 +33,13 @@ public class Main {
 			answer = str;
 		}
 		
-		/* 다른 풀이
+		// split로 단어 분리.
+		/* 
 		int m = Integer.MIN_VALUE;
 		String[] s = str.split(" ");
 		for(String x : s) {
 			int len = x.length();
+			// 최대값 구하는 알고리즘. (여기서 가장 긴 단어를 구함)
 			if(len > m) {
 				m = len;
 				answer =x;
