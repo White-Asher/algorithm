@@ -1,17 +1,16 @@
-// SWEA-1933[D1] 간단한 N의 약수
+// SWEA-1545[D1] 거꾸로 출력해 보아요
 
 package SWEA;
 
 import java.util.Scanner;
 
-public class swea1933D1 {
+public class SWEA1545D1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        for (int i = 1 ; i <= n; i++) {
-            if(n%i == 0){
-                System.out.print(i+" ");
-            }
+
+        for (int i = n; i >=0 ; i--) {
+            System.out.print(i +" ");
         }
     }
 }

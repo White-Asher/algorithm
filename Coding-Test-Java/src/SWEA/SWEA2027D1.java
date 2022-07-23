@@ -2,7 +2,7 @@
 
 package SWEA;
 
-public class swea2027D1 {
+public class SWEA2027D1 {
     public static void main(String[] args) {
         System.out.println("#++++");
         System.out.println("+#+++");

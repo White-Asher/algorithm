@@ -1,17 +1,16 @@
-// SWEA-2025[D1] N줄덧셈
+// SWEA-2046[D1] 스탬프 찍기
 
 package SWEA;
 
 import java.util.Scanner;
 
-public class swea2025D1 {
+public class SWEA2046D1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        int result = 0;
-        for (int i = 1; i <= n; i++) {
-            result += i;
+        for (int i = 0; i < n; i++) {
+            System.out.print("#");
         }
-        System.out.println(result);
+
     }
 }

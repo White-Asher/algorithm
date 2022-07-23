@@ -4,7 +4,7 @@ package SWEA;
 
 import java.util.Scanner;
 
-public class swea1945D2 {
+public class SWEA1945D2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int t = scanner.nextInt();

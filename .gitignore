@@ -5,7 +5,12 @@
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
+.metadata
 algorithm.iml
+*.classpath
+*.project
+*.iml
+
 # User-specific stuff
 .idea
 .idea/**/workspace.xml
@@ -405,3 +410,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,intellij,pycharm,java,python
+/.metadata/

@@ -1,16 +1,17 @@
-// SWEA-1545[D1] 거꾸로 출력해 보아요
+// SWEA-2025[D1] N줄덧셈
 
 package SWEA;
 
 import java.util.Scanner;
 
-public class swea1545D1 {
+public class SWEA2025D1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-
-        for (int i = n; i >=0 ; i--) {
-            System.out.print(i +" ");
+        int result = 0;
+        for (int i = 1; i <= n; i++) {
+            result += i;
         }
+        System.out.println(result);
     }
 }
