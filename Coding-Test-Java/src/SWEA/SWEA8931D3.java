@@ -3,7 +3,7 @@ package SWEA;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class SWEA9317D3 {
+public class SWEA8931D3 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int t = Integer.parseInt(br.readLine());
@@ -11,15 +11,20 @@ public class SWEA9317D3 {
 		for (int tc = 1; tc <= t; tc++) {
 			int ans = 0;
 			int n = Integer.parseInt(br.readLine());
-			String n1 = br.readLine();
-			String n2 = br.readLine();
-			
-			for(int i = 0; i < n; i++) {
-				if( n1.charAt(i) == n2.charAt(i)) {
-					ans++;
+			int[] arr = new int[n];
+			int idx = 0;
+			for(int i = 0; i < n ; i++) {
+				int num = Integer.parseInt(br.readLine());
+				if(num !=0) {
+					arr[idx++] = num;
+				} else if(num == 0) {
+					arr[--idx] = 0;
 				}
 			}
-
+			for (int i : arr) {
+				ans+=i;
+			}
+			
 			System.out.printf("#%d %d\n", tc, ans);
 		}
 	}
