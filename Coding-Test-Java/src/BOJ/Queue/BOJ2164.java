@@ -1,35 +1,25 @@
 package BOJ.Queue;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-// 144ms
 public class BOJ2164 {
-	public static void main(String[] args) throws NumberFormatException, IOException {
+	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());
 		Queue<Integer> queue = new LinkedList<>();
-		for (int i = 1; i <= n; i++) {
-			queue.add(i);
-		}
-		int flag = 1;
+		for (int i = 1; i <= n; i++) queue.add(i);
 		while(queue.size() > 1) {
-			if(flag % 2 == 1) {
 				queue.poll();
-			} else {
-				
 				queue.add(queue.poll());
-			}
-			flag++;
 		}
 		System.out.println(queue.poll());
 	}
 }
 
-/* 시간복잡도 절반... 76ms
+/* 시간복잡도 절반 솔루션... 76ms
 import java.io.*;
 import java.util.*;
 
