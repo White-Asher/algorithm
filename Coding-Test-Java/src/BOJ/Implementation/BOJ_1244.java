@@ -1,49 +1,66 @@
 package BOJ.Implementation;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
-public class BOJ_1244_스위치켜고끄기 {
-
-	public static void main(String[] args) throws FileNotFoundException {
-		System.setIn(new FileInputStream("data/1244.txt"));
-		Scanner sc = new Scanner(System.in);
-		int N = sc.nextInt();
-		// 스위치 번호가 1부터 오기 때문에 하나 더 인덱스 크기를 늘려 생성
-		int[] data = new int[N + 1];
-		for (int i = 1; i < N; i++) {
-			data[i] = sc.nextInt();
-		}
-		int stuNum = sc.nextInt(); // 학생수
-		int loc = 0; // 스위치의 위치를 나타낸다.
-		int[] change = {1,0};
+public class BOJ_1244 {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		// 스위치 토글 배열 선언
+		int[] swOnOFF = {1, 0};
 		
-		for (int i = 0; i < stuNum; i++) {			
-			switch (sc.nextInt()) {
-			case 1: // 남학생
-				loc = sc.nextInt();
-				for (int j = 0; j < N; j+=loc) {
-					data[j] = change[data[j]];
+		// 스위치 개수, 스위치 초기상태 입력
+		int swCnt = Integer.parseInt(br.readLine());
+		int[] sw = new int[swCnt];
+		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+		for (int i = 0; i < sw.length; i++) {
+			sw[i] = Integer.parseInt(st.nextToken());
+		}
+		
+		// 학생수, 성별, 받은 수 입력
+		int h = Integer.parseInt(br.readLine());
+		for (int i = 0; i < h; i++) {
+			StringTokenizer st2 = new StringTokenizer(br.readLine(), " ");
+			int gender = Integer.parseInt(st2.nextToken());
+			int swNum = Integer.parseInt(st2.nextToken()) - 1;
+
+			// 남학생 입력
+			if (gender == 1) {
+				int idx = swNum;
+				// 스위치 갯수 전까지 받은 수의 배수만큼 스위치 토글
+				while(swNum < swCnt) {
+					sw[swNum] = swOnOFF[sw[swNum]];
+					swNum += (idx+1);
 				}
-				break;
+			} 
+			// 여학생 입력
+			else {
+				// 범위 인덱스 크기 지정
+				int leftIdx = swNum-1;
+				int rightIdx = swNum+1;
+				sw[swNum] = swOnOFF[sw[swNum]];
 				
-			case 2: // 여학생
-				loc = sc.nextInt();
-				// left, right가 처음에는 똑같은데 하나씩 커지게 할 것..
-				int l = loc, r = loc;
-				while(l > 1 && r <= N) {
-					if (data[i] != data[r]) break;
-					data[l] = data[r] = change[data[l]];
-					l++; r++;
+				while(leftIdx >= 0 && rightIdx < swCnt) {
+					if(sw[leftIdx] == sw[rightIdx]) {
+						sw[leftIdx] = swOnOFF[sw[leftIdx]];
+						sw[rightIdx] = swOnOFF[sw[rightIdx]];
+						leftIdx-=1;
+						rightIdx+=1;
+					}
+					else {
+						break;
+					}
 				}
-				
 			}
 		}
-		for (int i = 1; i < N; i++) {
-			System.out.printf("%d%s", data[i], i % 20 == 0 ? "\n" : " " );
+		for (int i = 0; i < swCnt; i++) {
+			System.out.print(sw[i]+ " ");
+			if((i+1) % 20 == 0) {
+				System.out.println();
+			}
+			
 		}
-		sc.close();
 	}
 }
-

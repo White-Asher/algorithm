@@ -4,7 +4,7 @@ package BOJ.Implementation;
 
 import java.util.Scanner;
 
-public class BOJ2615 {
+public class BOJ_2615 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		int[][] map = new int[19+2][19+2];

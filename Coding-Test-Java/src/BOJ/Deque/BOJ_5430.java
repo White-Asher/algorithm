@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 import java.util.StringTokenizer;
 
-public class BOJ5430 {
+public class BOJ_5430 {
 	static StringBuilder sb;
 	static ArrayDeque<Integer> deque;
 	static boolean reverse;
