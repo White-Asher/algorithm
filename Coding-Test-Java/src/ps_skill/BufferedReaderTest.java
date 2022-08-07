@@ -13,7 +13,9 @@ public class BufferedReaderTest {
 //        brTest.test05();
 //        brTest.test0502();
 //        brTest.test06();
-        brTest.test0602();
+//        brTest.test0602();
+//        brTest.test07();
+        brTest.test0702();
     }
 
     // 정수 입출력 => 입력: 3 / 출력: 3
@@ -140,5 +142,41 @@ public class BufferedReaderTest {
     		arr[i] = Integer.parseInt(st.nextToken());
     	}
     	System.out.println(Arrays.toString(arr));
+    }
+    
+    public void test07() throws NumberFormatException, IOException {
+    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    	int size = Integer.parseInt(br.readLine());
+    	int[][] map = new int[size][size];
+
+    	// 맵 데이터 입력
+    	for (int i = 0; i < size; i++) {
+    		StringTokenizer st = new StringTokenizer(br.readLine());
+    		for (int j = 0; j < size; j++) {
+    			map[i][j] = Integer.parseInt(st.nextToken());
+    		}
+    	}
+    	
+    	for (int i = 0; i < size; i++) {
+			for (int j = 0; j < size; j++) {
+				System.out.print(map[i][j]+" ");
+			}
+			System.out.println();
+		}
+    }
+    public void test0702() throws NumberFormatException, IOException {
+    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    	int N = Integer.parseInt(br.readLine());
+    	int [][] map = new int[N][N];
+    	for (int i = 0; i < N; i++) {
+    		map[i] = Arrays.stream((br.readLine()).split(" ")).mapToInt(Integer::parseInt).toArray();
+    	}
+    	
+    	for (int i = 0; i < N; i++) {
+			for (int j = 0; j < N; j++) {
+				System.out.print(map[i][j]+" ");
+			}
+			System.out.println();
+		}
     }
 }
