@@ -1,4 +1,4 @@
-package com.ssafy.recur;
+package SWEA;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -15,7 +15,7 @@ public class SWEA1289D3 {
 			int[] nums = Stream.of(inputData.split("")).mapToInt(Integer::parseInt).toArray();
 
 			String[] inputStr = br.readLine().split("");
-			int[] inputInt = new int[inputStr.lenght]
+			int[] inputInt = new int[inputStr.length];
 			for(int i = 0; i < inputStr.length; i++){
 				inputInt[i] = Integer.parseInt(inputStr[i]);
 			}
