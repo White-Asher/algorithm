@@ -1,4 +1,4 @@
-package BOJ.recursive;
+package BOJ.NandM;
 
 import java.util.Scanner;
 
