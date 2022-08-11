@@ -3,7 +3,6 @@ package BOJ.Implementation;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class BOJ_17406 {
@@ -34,8 +33,7 @@ public class BOJ_17406 {
 				arr[i][j] = Integer.parseInt(st.nextToken());
 			}
 		}
-		
-		
+
 		nums = new int[K][3];
 		for(int k = 0; k < K; k++) {
 			st = new StringTokenizer(br.readLine());
@@ -43,7 +41,6 @@ public class BOJ_17406 {
 		}
 		numSequence = new int[K];
 		isSelect = new boolean[K+1];
-//		System.out.println(Arrays.deepToString(arr));
 		permutation(0);
 		System.out.println(min);
 	}
@@ -61,14 +58,8 @@ public class BOJ_17406 {
     			R = nums[numSequence[i]][0];
 				C = nums[numSequence[i]][1];
 				S = nums[numSequence[i]][2];
-//				System.out.println("======================");
-//				System.out.print("R: "+ R +", C: "+C+", S: "+S+"\n");
 				rotate(R, C, S);
-				
-//				System.out.println("arr"+Arrays.deepToString(arr));
-//				System.out.println("map"+Arrays.deepToString(map));
     		}
-//    		System.out.println("======================");
     		for (int i = 0; i < N; i++) {
     			int temp = 0;
     			for (int j = 0; j < M; j++) {

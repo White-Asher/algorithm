@@ -1,6 +1,6 @@
 // 프로그래머스 L1 - 문자열 내림차순 출력
 
-package UnsolvedProblem;
+package _UnsolvedProblem;
 
 import java.util.Arrays;
 import java.util.Collections;

@@ -1,6 +1,6 @@
 // 프로그래머스 L1 -  시저암호
 
-package UnsolvedProblem;
+package _UnsolvedProblem;
 
 public class ProL1CaesarsCode {
     public static void main(String[] args) {
