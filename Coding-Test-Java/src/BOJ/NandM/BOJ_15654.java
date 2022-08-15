@@ -5,26 +5,32 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class BOJ_15652 {
+public class BOJ_15654 {
 	static int N, R;
-	static int[] nums;
+	static int[] nums, inputs;
+	static StringTokenizer st;
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine());
+		st = new StringTokenizer(br.readLine());
 		N = Integer.parseInt(st.nextToken());
 		R = Integer.parseInt(st.nextToken());
-		
 		nums = new int[R];
+		inputs = new int[N];
+
 		
-		duplicatePermutation(0, 1);
+		st = new StringTokenizer(br.readLine());
+		for (int i = 0; i < N; i++) inputs[i] = Integer.parseInt(st.nextToken());
+		Arrays.sort(inputs);		
+		perm(0, 0);
 		bw.flush();
 		bw.close();
 	}
 	
-	public static void duplicatePermutation(int cnt, int start) throws IOException {
+	public static void perm(int cnt, int flag) throws IOException {
 		if(cnt == R) {
 			for (int i : nums) {
 				bw.write(i+" ");
@@ -32,9 +38,12 @@ public class BOJ_15652 {
 			bw.write("\n");
 			return;
 		}
-		for(int i = start; i <= N; i++) {
-			nums[cnt] = i;
-			duplicatePermutation(cnt+1, i);
+		
+		for (int i = 0; i < N; i++) {
+			if((flag & 1 << i) != 0) continue;
+			nums[cnt] = inputs[i];
+			perm(cnt+1, flag | 1 << i);
 		}
+		
 	}
 }
