@@ -1,4 +1,4 @@
-package BOJ.Implementation;
+package BOJ.Queue;
 
 import java.util.LinkedList;
 import java.util.List;
