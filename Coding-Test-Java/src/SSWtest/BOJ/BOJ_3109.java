@@ -1,4 +1,4 @@
-package BOJ.BFSDFS;
+package SSWtest.BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;

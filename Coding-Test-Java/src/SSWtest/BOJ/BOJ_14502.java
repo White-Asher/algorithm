@@ -1,4 +1,4 @@
-package BOJ._SSWtest;
+package SSWtest.BOJ;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

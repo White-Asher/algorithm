@@ -1,4 +1,4 @@
-package BOJ._SSWtest;
+package SSWtest.BOJ.Unsolve;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -27,7 +27,6 @@ public class BOJ_2206 {
 			this.wallBreak = wallBreak;
 		}
 	}
-	
 	
 	public static void main(String[] args) throws IOException {
 		input();

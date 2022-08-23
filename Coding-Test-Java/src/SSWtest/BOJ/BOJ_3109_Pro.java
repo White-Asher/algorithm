@@ -1,23 +1,29 @@
-package BOJ.BFSDFS;
+package SSWtest.BOJ;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class BOJ_3109_Pro {
 	static char[][] map;
 	static int ans, R, C;
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		R = sc.nextInt();
-		C = sc.nextInt();
+	static StringTokenizer st;
+	static int[] dr = {-1,0,1};
+	
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		st = new StringTokenizer(br.readLine());
+		R = Integer.parseInt(st.nextToken());
+		C = Integer.parseInt(st.nextToken());
 		map = new char[R][]; //행만 크기를 잡아놓고 한줄 한줄 받아서 배열로 넣을 것임.
 		
-		for (int i = 0; i < R; i++) map[i] = sc.next().toCharArray();
-		
+		for (int i = 0; i < R; i++) map[i] = br.readLine().toCharArray();
 		for (int i = 0; i < R; i++) DFS(i, 0);
 		
 		System.out.println(ans);
 	}
-	static int[] dr = {-1,0,1};
+
 	public static boolean DFS(int r, int c) {
 		map[r][c] = 'x';
 //		map[r][c] = '.'; // 실패한 경우도 다시 탐색하게 됨.

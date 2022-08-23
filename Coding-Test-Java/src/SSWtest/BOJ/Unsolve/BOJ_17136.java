@@ -1,4 +1,4 @@
-package BOJ._SSWtest;
+package SSWtest.BOJ.Unsolve;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

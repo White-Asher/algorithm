@@ -1,4 +1,4 @@
-package BOJ._SSWtest;
+package SSWtest.BOJ;
 
 import java.util.*;
 import java.io.*;

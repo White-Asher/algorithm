@@ -1,10 +1,10 @@
-package BOJ._SSWtest;
+package SSWtest.BOJ;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class BOJ_15683_감시 {
+public class BOJ_15683_Pro {
 	static class CCTV{
 		int r,c,d;
 		CCTV(int r, int c, int d){
