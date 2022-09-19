@@ -1,4 +1,4 @@
-package Theory;
+package Theory.DFSBFS;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class AdjList {
+public class BFSDFS_AdjList {
 	static int N;
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {

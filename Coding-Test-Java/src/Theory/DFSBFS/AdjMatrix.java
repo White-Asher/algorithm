@@ -1,4 +1,4 @@
-package Theory;
+package Theory.DFSBFS;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

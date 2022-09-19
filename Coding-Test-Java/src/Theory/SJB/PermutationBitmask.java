@@ -1,4 +1,4 @@
-package Theory;
+package Theory.SJB;
 
 import java.util.Arrays;
 import java.util.Scanner;
