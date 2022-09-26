@@ -1,4 +1,4 @@
-package SSWtest.SWEA;
+package SSWtest.queuelist._2_SWEA_2117;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
