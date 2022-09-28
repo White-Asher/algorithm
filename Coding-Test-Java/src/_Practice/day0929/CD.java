@@ -1,4 +1,4 @@
-package _aPractice.day0922;
+package _Practice.day0929;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,44 +6,37 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Permu_duplicate {
+public class CD {
 	static int N, R;
 	static int[] nums;
 	static int[] inputs;
-	static StringTokenizer st;
 	
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		st = new StringTokenizer(br.readLine());
+		N = Integer.parseInt(br.readLine());
+		R = Integer.parseInt(br.readLine());
 		
-		N = Integer.parseInt(st.nextToken());
-		R = Integer.parseInt(st.nextToken());
-		
-		nums = new int[R];
 		inputs = new int[N];
+		nums = new int[R];
 		
-		st= new StringTokenizer(br.readLine());
+		StringTokenizer st =new StringTokenizer(br.readLine());
 		for (int i = 0; i < N; i++) {
 			inputs[i] = Integer.parseInt(st.nextToken());
 		}
 		
-		permuDuplicate(0);
-		
+		combiDup(0,0);
 	}
 
-	private static void permuDuplicate(int cnt) {
+	private static void combiDup(int cnt, int start) {
 		if(cnt == R) {
 			System.out.println(Arrays.toString(nums));
 			return;
 		}
 		
-		for (int i = 0; i < N; i++) {
+		for (int i = start; i < N; i++) {
 			nums[cnt] = inputs[i];
-			permuDuplicate(cnt+1);
+			combiDup(cnt+1, i);
 		}
 		
 	}
-	
-	
-	
 }

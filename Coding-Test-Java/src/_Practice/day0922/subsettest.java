@@ -1,4 +1,4 @@
-package _aPractice.day0922;
+package _Practice.day0922;
 
 import java.io.BufferedReader;
 import java.io.IOException;
