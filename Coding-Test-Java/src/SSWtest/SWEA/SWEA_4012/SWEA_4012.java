@@ -1,4 +1,4 @@
-package SSWtest._notClearUp;
+package SSWtest.SWEA.SWEA_4012;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,6 @@ import java.util.StringTokenizer;
 
 public class SWEA_4012 {
 	static int N, R;
-	static boolean[] check;
 	static int[] nums, otherNums;
 	static int[][] fruit;
 	static int ans = 0;
@@ -20,11 +19,10 @@ public class SWEA_4012 {
 			N = Integer.parseInt(br.readLine());
 			
 			ans = Integer.MAX_VALUE;
-			R = N/2;
-			check = new boolean[N+1];
-			nums = new int[R];
-			otherNums = new int[R];
-			fruit = new int[N][N];
+			R = N/2; 
+			nums = new int[R]; // A음식
+			otherNums = new int[R]; // B음식
+			fruit = new int[N][N]; // 재료 
 			
 			for (int i = 0; i < N; i++) {
 				StringTokenizer st = new StringTokenizer(br.readLine());
@@ -36,10 +34,10 @@ public class SWEA_4012 {
 		}
 	}
 	
-	
+	// 조합을 이용해 A음식에 사용할 재료를 구하자
 	public static void combination(int cnt, int start) {
 		if(cnt == R) {;
-			getOtherNums();
+			getOtherNums(); //A음식에 사용되지 않은 재료는 B음식의 재료
 			solution();
 			return;
 		}
@@ -53,11 +51,16 @@ public class SWEA_4012 {
 		int idx = 0;
 		for(int i = 0; i < N; i++ ) {
 			boolean flag = true;
-			for(int j = 0; j < R; j++) if(i == nums[j]) flag = false;
+			for(int j = 0; j < R; j++) {
+				if(i == nums[j]) {
+					flag = false;				
+				}
+			}
 			if(flag) otherNums[idx++] = i;
 		}
 	}
 	
+	// 시너지 구하기 
 	public static void solution() {
 		int a = 0;
 		int b = 0;
@@ -69,5 +72,6 @@ public class SWEA_4012 {
 		}
 		int diff = Math.abs(a-b);
 		if(ans > diff) ans = diff;
+		// ans = Math.min(Math.abs(a-b), ans); //와 같음
 	}
 }

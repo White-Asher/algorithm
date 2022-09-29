@@ -1,4 +1,4 @@
-package SSWtest._notClearUp;
+package SSWtest.SWEA.SWEA_5658;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -22,6 +22,7 @@ public class SWEA_5658 {
 			this.value = value;
 			this.decimalVal = decimalVal;
 		}
+		// 16진수 기준으로 정렬하기 위해 정의. 
 		@Override
 		public int compareTo(Box o) {
 			return -(this.decimalVal-o.decimalVal);
@@ -44,7 +45,7 @@ public class SWEA_5658 {
 			String[] input = br.readLine().split("");
 			int area = input.length/4;
 			pwSet = new HashSet<>();
-			LinkedList<Box> queue = new LinkedList<>();
+			LinkedList<Box> list = new LinkedList<>();
 			// 기본상태
 			getNum(input, area);
 			for (int i = 0; i < area; i++) {
@@ -52,12 +53,15 @@ public class SWEA_5658 {
 				getNum(input, area);
 			}
 
+			// 리스트 에 경우의수를 string형태로, 16진수의 값으로 입력한다.
 			for (String str : pwSet) {
-				queue.offer(new Box(str, Integer.parseInt(str, 16)));
+				list.offer(new Box(str, Integer.parseInt(str, 16)));
 			}
-			Collections.sort(queue);
+			// 다 넣었으면 16진수가 가장 큰 것부터 정렬함. 
+			Collections.sort(list);
 
-			int ans = queue.get(K-1).decimalVal;
+			// 해당 번째 16진수 값 출력
+			int ans = list.get(K-1).decimalVal;
 			
 			System.out.printf("#%d %d\n", t, ans);
 		}
