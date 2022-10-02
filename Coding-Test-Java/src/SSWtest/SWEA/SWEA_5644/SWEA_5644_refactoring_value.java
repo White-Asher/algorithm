@@ -1,27 +1,27 @@
-package SSWtest._notClearUp;
+package SSWtest.SWEA.SWEA_5644;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class SWEA_5644_refactoring {
+public class SWEA_5644_refactoring_value {
 
 	static class User {
-		int r, c;
+		int x, y;
 
-		public User(int r, int c) {
-			this.r = r;
-			this.c = c;
+		public User(int x, int y) {
+			this.x = x;
+			this.y = y;
 		}
 	}
 
 	static class BC {
-		int r, c, coverage, performance;
+		int y, x, coverage, performance;
 
-		public BC(int r, int c, int coverage, int performance) {
-			this.r = r;
-			this.c = c;
+		public BC(int x, int y, int coverage, int performance) {
+			this.x = x;
+			this.y = y;
 			this.coverage = coverage;
 			this.performance = performance;
 		}
@@ -31,16 +31,17 @@ public class SWEA_5644_refactoring {
 	static int M, A;
 	static User aUser, bUser;
 	static BC[] bc;
-	static int[] dr = { 0, -1, 0, 1, 0 };
-	static int[] dc = { 0, 0, 1, 0, -1 };
+	static int[] dx = {0, 0, 1, 0, -1};
+	static int[] dy = {0, -1, 0, 1, 0};
 	static int[] aPath, bPath; // a사용자경로, b사용자 경로
-
+	static StringTokenizer st;
+	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int T = Integer.parseInt(br.readLine());
 
 		for (int t = 1; t <= T; t++) {
-			StringTokenizer st = new StringTokenizer(br.readLine());
+			st = new StringTokenizer(br.readLine());
 			M = Integer.parseInt(st.nextToken()); // 총 이동시간
 			A = Integer.parseInt(st.nextToken()); // BC갯수
 
@@ -49,10 +50,10 @@ public class SWEA_5644_refactoring {
 
 			// a사용자에 대한 경로, b사용자에 대한 경로
 			st = new StringTokenizer(br.readLine());
-			for (int i = 0; i < M; i++)
+			for (int i = 1; i <= M; i++)
 				aPath[i] = Integer.parseInt(st.nextToken());
 			st = new StringTokenizer(br.readLine());
-			for (int i = 0; i < M; i++)
+			for (int i = 1; i <= M; i++)
 				bPath[i] = Integer.parseInt(st.nextToken());
 
 			bc = new BC[A];
@@ -74,41 +75,36 @@ public class SWEA_5644_refactoring {
 
 	private static int solve() {
 		int ans = 0;
-		for (int time = 0; time <= M; time++) { // 각 시간별 모든 충전소에 접근해서 가장 큰 값을 얻는다.
+		for (int time = 0; time <= M; time++) {  // 각 시간별 모든 충전소에 접근해서 가장 큰값을 얻는다.
 			// 사용자의 위치 이동(aUser, bUser)
-			aUser.r += dr[aPath[time]];
-			aUser.c += dc[aPath[time]];
-			bUser.r += dr[bPath[time]];
-			bUser.c += dc[bPath[time]];
-
-			ans += getCharge(); // 최대 충전량 계산
+			aUser.x += dx[aPath[time]];
+			aUser.y += dy[aPath[time]];
+			bUser.x += dx[bPath[time]];
+			bUser.y += dy[bPath[time]];
+			// 최대 충전량 가져오기
+			ans += getCharge();
 		}
 		return ans;
 	}
 
 	private static int getCharge() {
 		int max = 0;
-		for (int a = 0; a < A; a++) { // a유저 선택 BC
-			for (int b = 0; b < A; b++) { // b유저 선택 BC
+		for (int a = 0; a < A; a++) {    // aUser 선택 BC
+			for (int b = 0; b < A; b++) {	// bUser 선택 BC
 				int sum = 0;
 				int aSum = getBCPerformance(a, aUser);
 				int bSum = getBCPerformance(b, bUser);
-				if (a != b)
-					sum = aSum + bSum;
-				else
-					sum = Math.max(aSum, bSum);
-
-				if (max < sum)
-					max = sum;
-
-			}
+				if (a != b) sum = aSum + bSum;
+				else 		sum = Math.max(aSum, bSum);
+				
+				if (max < sum) max = sum;
+			}			
 		}
-		return 0;
+		return max;
 	}
 
 	// 배터리의 위치와 사용자의 위치를 계산하여 범위에 들어오는지 확인.
 	private static int getBCPerformance(int idx, User user) {
-		return (Math.abs(bc[idx].r - user.r) + Math.abs(bc[idx].c - user.c) <= bc[idx].coverage) 
-				? bc[idx].performance : 0;
+		return Math.abs(bc[idx].y - user.y) + Math.abs(bc[idx].x - user.x) <= bc[idx].coverage ? bc[idx].performance : 0;
 	}
 }

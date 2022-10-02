@@ -1,4 +1,4 @@
-package SSWtest.SWEA_5644;
+package SSWtest.SWEA.SWEA_5644;
 
 import java.io.FileInputStream;
 import java.util.Scanner;
