@@ -1,4 +1,4 @@
-package SSWtest.BOJ;
+package SSWtest.BOJ.BOJ_3055;
 
 import java.io.BufferedReader;
 import java.io.IOException;
