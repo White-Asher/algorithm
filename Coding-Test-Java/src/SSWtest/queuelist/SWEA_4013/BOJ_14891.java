@@ -1,4 +1,4 @@
-package SSWtest._Unsolve;
+package SSWtest.queuelist.SWEA_4013;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -33,7 +33,6 @@ public class BOJ_14891 {
 		}
 
 		int K = Integer.parseInt(br.readLine());
-
 
 		for (int i = 0; i < K; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());

@@ -1,4 +1,4 @@
-package SSWtest._Unsolve;
+package SSWtest.BOJ.BOJ_17136;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -48,7 +48,7 @@ public class BOJ_17136 {
 				}
 				
 			}
-		} 
+		}
 		else DFS(x, y+1, cnt); // 우측 탐색
 		
 	}

@@ -1,14 +1,12 @@
-package SSWtest._Unsolve;
+package SSWtest.queuelist.SWEA_4013;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class BOJ_14891_Pro {
+public class SWEA_4013_Pro {
 	static LinkedList<Integer>[] magnet;
 	public static void main(String[] args) throws FileNotFoundException {
-		System.setIn(new FileInputStream("data/swea_4013.txt"));
 		Scanner sc = new Scanner(System.in);
 		int T = sc.nextInt();
 		for (int t = 1; t <= T; t++) {
