@@ -1,4 +1,4 @@
-package SSWtest.queuelist._1_SWEA_2115;
+package SSWtest.SWEA.SWEA_2115;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,13 +11,11 @@ import java.util.StringTokenizer;
 코드길이 : 2,360
 */
 
-public class SWEA_2115_1{
+public class SWEA_2115_1_refactor{
 	static StringTokenizer st;
 	static int N, M, C;
 	static int[][] map;
-	static boolean[][] checked;
 	static int maxProfit;
-	
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int T = Integer.parseInt(br.readLine());
@@ -28,7 +26,7 @@ public class SWEA_2115_1{
 			M = Integer.parseInt(st.nextToken());
 			C = Integer.parseInt(st.nextToken());
 			map = new int[N][N];
-			checked = new boolean[N][N];
+
 			maxProfit = 0;
 			for (int i = 0; i < N; i++) {
 				st = new StringTokenizer(br.readLine());
