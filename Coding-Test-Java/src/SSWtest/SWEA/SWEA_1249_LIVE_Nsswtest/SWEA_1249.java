@@ -1,4 +1,4 @@
-package SWEA.SWNormal;
+package SSWtest.SWEA.SWEA_1249_LIVE_Nsswtest;
 
 import java.io.BufferedReader;
 import java.io.IOException;
