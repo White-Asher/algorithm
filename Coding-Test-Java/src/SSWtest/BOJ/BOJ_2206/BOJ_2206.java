@@ -1,4 +1,4 @@
-package SSWtest._Unsolve;
+package SSWtest.BOJ.BOJ_2206;
 
 import java.io.BufferedReader;
 import java.io.IOException;
