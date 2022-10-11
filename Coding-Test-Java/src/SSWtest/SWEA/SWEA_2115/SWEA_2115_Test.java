@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
 코드길이 : 2,360
 */
 
-public class SWEA_2115_1{
+public class SWEA_2115_Test{
 	static StringTokenizer st;
 	static int N, M, C;
 	static int[][] map;
@@ -81,11 +81,9 @@ public class SWEA_2115_1{
 	
 	public static void checkGetHoney(int i, int j, int count, int honeySum, int profit) {
 		// 채취한 꿀들이 최대 꿀 넘으면 멈춤
-		if(honeySum > C) {
-			return;
-		}
+		if(honeySum > C) return;
 		
-		// 벌통 M개 선택했을 때
+		// 벌통 M개 까지 탐색함
 		if(count == M) {
 			if(maxProfit < profit)
 				maxProfit = profit;
@@ -97,7 +95,7 @@ public class SWEA_2115_1{
 		
 		// 꿀 선택
 		checkGetHoney(i, j+1, count + 1, honeySum + curHoney, profit + curProfit);
-		// 꿀 선택안함
+		// 꿀 선택안함 (카운트 증가)
 		checkGetHoney(i, j+1, count + 1, honeySum , profit);
 		
 	}

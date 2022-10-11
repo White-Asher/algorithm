@@ -81,22 +81,26 @@ public class SWEA_5644_refactoring_value {
 			aUser.y += dy[aPath[time]];
 			bUser.x += dx[bPath[time]];
 			bUser.y += dy[bPath[time]];
-			// 최대 충전량 가져오기
+			// 해당 시간에 a,b 사용자 좌표에서 최대 충전량 가져오기
 			ans += getCharge();
 		}
 		return ans;
 	}
 
+	// 한 타임마다. 충전기에서 a선택과 b선택 경우의 수를 모두 따짐. (중복조합)
 	private static int getCharge() {
 		int max = 0;
 		for (int a = 0; a < A; a++) {    // aUser 선택 BC
 			for (int b = 0; b < A; b++) {	// bUser 선택 BC
 				int sum = 0;
+				// 만약 a사용자가 선택하는 충전기와 b사용자가 선택한 중전기가 같은 경우가 나올 수 있음.
 				int aSum = getBCPerformance(a, aUser);
 				int bSum = getBCPerformance(b, bUser);
+				// 서로 다른 충전기면 서로 충전양 더함. 
 				if (a != b) sum = aSum + bSum;
 				else 		sum = Math.max(aSum, bSum);
 				
+				// 현재 계산한게 기존 최대 값 넘으면 갱신함.
 				if (max < sum) max = sum;
 			}			
 		}
@@ -105,6 +109,8 @@ public class SWEA_5644_refactoring_value {
 
 	// 배터리의 위치와 사용자의 위치를 계산하여 범위에 들어오는지 확인.
 	private static int getBCPerformance(int idx, User user) {
-		return Math.abs(bc[idx].y - user.y) + Math.abs(bc[idx].x - user.x) <= bc[idx].coverage ? bc[idx].performance : 0;
+		return Math.abs(bc[idx].y - user.y) 
+				+ Math.abs(bc[idx].x - user.x) 
+				<= bc[idx].coverage ? bc[idx].performance : 0;
 	}
 }

@@ -1,4 +1,4 @@
-package SSWtest.queuelist.SWEA_2112;
+package SSWtest.SWEA.SWEA_2112;
 
 import java.io.BufferedReader;
 import java.io.IOException;

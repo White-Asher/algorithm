@@ -6,17 +6,14 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class BOJ_17136_TRY1 {
-	
-	static int ans;
-	static int[] paper = {0,5,5,5,5,5};
 	static int[][] map;
+	static int[] paper = {0,5,5,5,5,5};
+	static int ans;
 	
 	public static void main(String[] args) throws IOException {
+		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
-		
 		map = new int[10][10];
-		
 		ans = Integer.MAX_VALUE;
 		
 		for (int i = 0; i < 10; i++) {
@@ -39,6 +36,7 @@ public class BOJ_17136_TRY1 {
 			return;
 		}
 		
+		// 이 조건을 걸어주지 않으면 매우 오래 걸릴 가능성이 있음 (가지치기)
 		if(ans <= count) return;
 		
 		if (c > 9) {
@@ -48,12 +46,15 @@ public class BOJ_17136_TRY1 {
 		
 		if (map[r][c] == 1) {
 			for (int i = 5; i >= 1; i--) {
-				if (paper[i] > 0 && isGlue(r, c, i)) {
-					paperPastDetach(r, c, i, 0);
-					paper[i]--;
-					DFS(r, c + 1, count + 1);
-					paperPastDetach(r, c, i, 1);
-					paper[i]++;
+				
+				if (isGlue(r, c, i)) {
+					if(paper[i] > 0) {
+						paperPastDetach(r, c, i, 0);
+						paper[i]--;
+						DFS(r, c + 1, count + 1);
+						paperPastDetach(r, c, i, 1);
+						paper[i]++;						
+					}
 				}
 
 			}

@@ -1,11 +1,17 @@
-package BOJ.Implementation.BOJ_2239;
+package BOJ.BFSDFS.BOJ_2239;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class BOJ_2239_FIrst {
-	static final int SIZE = 9; 
+/*
+메모리: 17608
+시간: 680ms
+코드길이: 1566
+*/
+
+public class BOJ_2239_HW_Submit {
+	static final int SIZE = 9;  // 스도쿠 사이즈
 	static int[][] map;
 	
 	public static void main(String[] args) throws IOException {		
@@ -24,36 +30,28 @@ public class BOJ_2239_FIrst {
 	}
 
 	private static void DFS(int y, int x) throws IOException {
+		
 		// x좌표 끝까지 이동하면 다음 y좌표 이동
-		if(x == SIZE) {
-			y++;
-			DFS(y, 0);
+		if(x == SIZE) { 
+			DFS(y++, 0);
 			return;
 		}
 		
 		// 끝까지 완료했다면 출력후 종료
-		if (y == SIZE) {
-			mapOut();
-		}
+		if (y == SIZE) mapOut();
 		
-		// 빈칸일 때
-		if(map[y][x] == 0) {
-			// 값 1부터 9까지 넣어보기
-			for (int i = 1; i <= SIZE; i++) {
-				
-				// 입력할 수 있는지 체크
-				if(check(y,x,i)) {
+		if(map[y][x] != 0) { // 빈칸이 아니라면 다음 x좌표 탐색
+			DFS(y, x+1);
+		} else if(map[y][x] == 0) { // 빈칸이라면
+			for (int i = 1; i <= SIZE; i++) { // 값 1부터 9까지 넣어보기
+				if(check(y,x,i)) { // 입력할 수 있는지 체크
 					map[y][x] = i; // 해당 값 넣고 탐색 
 					DFS(y, x+1);
 				}
 			}
-			// 원복
-			map[y][x] = 0;
+			map[y][x] = 0; // 복구
 			return;
-		} else if(map[y][x] != 0) {
-			// 빈칸이 아니라면 다음 x좌표 탐색
-			DFS(y, x+1);
-		}
+		} 
 		
 	}
 	

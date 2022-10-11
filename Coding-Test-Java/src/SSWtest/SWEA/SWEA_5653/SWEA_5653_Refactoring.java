@@ -23,7 +23,7 @@ public class SWEA_5653_Refactoring {
     // 4방향 탐색
     static int[] dx = {-1,1,0,0};
     static int[] dy = {0,0,-1,1};
-    static final int MAP_SIZE = 400; // 맵 크기 (380까지 시도해봄 350은 안됨.)
+    static final int MAP_SIZE = 400; 
     static PriorityQueue<Cell> cells;
     
     static class Cell implements Comparable<Cell>{

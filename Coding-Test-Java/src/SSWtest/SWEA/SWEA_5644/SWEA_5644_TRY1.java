@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 /*none*/
-public class SWEA_5644_TRY_01 {
+public class SWEA_5644_TRY1 {
 	
 	static class User{
 		int r, c;
@@ -39,7 +39,7 @@ public class SWEA_5644_TRY_01 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int T = Integer.parseInt(br.readLine());
 		
-		for (int t = 0; t < T; t++) {
+		for (int t = 1; t <= T; t++) {
 			st = new StringTokenizer(br.readLine());
 			M = Integer.parseInt(st.nextToken());
 			A = Integer.parseInt(st.nextToken());
@@ -49,11 +49,11 @@ public class SWEA_5644_TRY_01 {
 			
 			// a사용자 경로, b사용자 경로
 			st = new StringTokenizer(br.readLine());
-			for (int i = 0; i < M; i++) {
+			for (int i = 1; i <= M; i++) {
 				aPath[i] = Integer.parseInt(st.nextToken());
 			}
 			st = new StringTokenizer(br.readLine());
-			for (int i = 0; i < M; i++) {
+			for (int i = 1; i <= M; i++) {
 				bPath[i] = Integer.parseInt(st.nextToken());
 			}
 			
@@ -77,7 +77,7 @@ public class SWEA_5644_TRY_01 {
 
 	private static int solve() {
 		int ans = 0;
-		for (int time = 0; time < M; time++) {
+		for (int time = 0; time <= M; time++) {
 			aUser.r += dr[aPath[time]];
 			aUser.c += dc[aPath[time]];
 			bUser.r += dr[bPath[time]];

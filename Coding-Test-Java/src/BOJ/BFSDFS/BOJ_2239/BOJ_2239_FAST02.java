@@ -1,4 +1,4 @@
-package BOJ.Implementation.BOJ_2239;
+package BOJ.BFSDFS.BOJ_2239;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

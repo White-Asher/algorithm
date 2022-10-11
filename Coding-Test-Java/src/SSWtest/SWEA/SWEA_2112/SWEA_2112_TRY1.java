@@ -1,11 +1,11 @@
-package SSWtest.queuelist.SWEA_2112;
+package SSWtest.SWEA.SWEA_2112;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class SWEA_2112_TRY2 {
+public class SWEA_2112_TRY1 {
 	static StringTokenizer st;
 	static int D, W, K;
 	static int[][] cell;
@@ -61,25 +61,33 @@ public class SWEA_2112_TRY2 {
 		if(count > ans || count > K) return;
 		if(y == D) return;
 		
-		int[] copyMap = copyMap(y);
+		int[][] copyMap = copyMap();
 		
 		DFS(count, y+1);
 		
-		for (int x = 0; x < W; x++) cell[y][x] = 0;
+		for (int x = 0; x < W; x++) {
+			cell[y][x] = 0;
+		}
 		DFS(count+1, y+1);
 		
-		for (int x = 0; x < W; x++) cell[y][x] = 1;
+		for (int x = 0; x < W; x++) {
+			cell[y][x] = 1;
+		}
 		DFS(count+1, y+1);
 		
-		for (int x = 0; x < W; x++) cell[y][x] = copyMap[x];
-
+		for (int x = 0; x < W; x++) {
+			cell[y][x] = copyMap[y][x];
+		}
+		
+		
 	}
 	
-	// 2차원 배열 복사가 아닌 1차원 배열 복사,..
-	public static int[] copyMap(int y){
-		int[] temp = new int[W];
-		for (int x = 0; x < W; x++) {
-			temp[x] = cell[y][x];
+	public static int[][] copyMap(){
+		int[][] temp = new int[D][W];
+		for (int i = 0; i < D; i++) {
+			for (int j = 0; j < W; j++) {
+				temp[i][j] = cell[i][j];
+			}
 		}
 		return temp;
 	}
@@ -93,15 +101,13 @@ public class SWEA_2112_TRY2 {
 			for (int y = 0; y < D-1; y++) {
 				if(cell[y][x] == cell[y+1][x]) {
 					count++;
+					if(count == K) continue outer;
 				} else {
 					count = 1;
 				}
-				
+			
 				maxCount = Math.max(maxCount, count);
 				
-				if (count == K) { // 통과. BT5
-					continue outer;
-				}
 				
 				if(y == D - K && maxCount < K) {
 					if(cell[y][x] != cell[y+1][x]) {
@@ -110,7 +116,7 @@ public class SWEA_2112_TRY2 {
 				}
 				
 			}	
-			if(maxCount < K) return false;
+			return false;
 			
 		} // for-loop end
 		return true;

@@ -1,4 +1,4 @@
-package SSWtest.BOJ;
+package SSWtest.BOJ.BOJ_15683;
 
 import java.util.ArrayList;
 import java.util.List;
