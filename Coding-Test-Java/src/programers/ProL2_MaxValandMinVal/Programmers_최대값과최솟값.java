@@ -3,7 +3,7 @@ package programers.ProL2_MaxValandMinVal;
  * L2
  * 최댓값과 최솟값
  */
-public class ProL2_MaxValandMinVal {
+public class Programmers_최대값과최솟값 {
 	public static void main(String[] args) {
 		Solution sol = new Solution();
 		System.out.println(sol.solution("1 2 3 4"));
