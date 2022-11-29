@@ -1,4 +1,4 @@
-package BOJ.gomgom;
+package BOJ.gomgom2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,7 +12,7 @@ public class ProA {
 		for (int i = 0; i < N; i++) {
 			String[] input = br.readLine().split("-");
 			int num = Integer.parseInt(input[1]);
-			if(num <= 90) {
+			if (num <= 90) {
 				result += 1;
 			}
 		}

@@ -11,6 +11,7 @@ algorithm.iml
 *.classpath
 *.project
 *.iml
+.history/
 
 # User-specific stuff
 .idea
