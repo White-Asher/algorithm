@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ.BFSDFS;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,7 +24,7 @@ public class BOJ_5427 {
             st = new StringTokenizer(br.readLine());
             W = Integer.parseInt(st.nextToken());
             H = Integer.parseInt(st.nextToken());
-            map = new char[W][H];
+            map = new char[H][W];
 
             humanqueue = new ArrayDeque<>();
             firequeue = new ArrayDeque<>();
@@ -56,7 +56,6 @@ public class BOJ_5427 {
 
         while (!humanqueue.isEmpty()) {
 
-            // 불 큐
             int firequeuesize = firequeue.size();
             for (int i = 0; i < firequeuesize; i++) {
                 int[] q = firequeue.poll();
@@ -66,14 +65,13 @@ public class BOJ_5427 {
                 for (int d = 0; d < 4; d++) {
                     int ny = curY + dy[d];
                     int nx = curX + dx[d];
+                    if(ny < 0 || nx < 0 || ny >= H || nx >= W) continue;
                     if (map[ny][nx] == '*') continue;
                     if (map[ny][nx] == '#') continue;
-                    if (map[ny][nx] == '@') return 0;
                     firequeue.add(new int[]{ny, nx});
                     map[ny][nx] = '*';
                 }
             }
-
 
             // 탈출 큐
             int humanqueuesize = humanqueue.size();
@@ -85,18 +83,21 @@ public class BOJ_5427 {
                 for (int d = 0; d < 4; d++) {
                     int ny = curY + dy[d];
                     int nx = curX + dx[d];
-
+                    if (ny < 0 || nx < 0 || ny >= H || nx >= W) return visited[curY][curX];
+                    if (visited[ny][nx] != 0) continue;
                     if (map[ny][nx] == '*') continue;
                     if (map[ny][nx] == '#') continue;
 
-                    if (ny < 0 || nx < 0 || ny >= H || nx >= W) {
-                        return visited[curY][curX];
-                    }
-
+                    map[ny][nx] = '@';
+                    visited[ny][nx] = visited[curY][curX] + 1;
+                    humanqueue.add(new int[] {ny, nx});
                 }
 
-
             }
+
+
+
+
         }
 
         return 0;
