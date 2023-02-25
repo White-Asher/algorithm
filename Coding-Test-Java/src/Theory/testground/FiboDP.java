@@ -1,4 +1,4 @@
-package Theory;
+package Theory.testground;
 
 import java.util.Scanner;
 
