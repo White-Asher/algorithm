@@ -1,8 +1,5 @@
 package Programers.lv0.옹알이1;
 
-import java.util.*;
-import java.io.*;
-
 public class Programmers_L0_옹알이1 {
     public static void main(String[] args) {
         Solution solution = new Solution();

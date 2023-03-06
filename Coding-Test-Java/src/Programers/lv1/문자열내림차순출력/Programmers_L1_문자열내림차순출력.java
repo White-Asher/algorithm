@@ -1,19 +1,19 @@
 // 프로그래머스 L1 - 문자열 내림차순 출력
 
-package _UnsolvedProblem;
+package Programers.lv1.문자열내림차순출력;
 
 import java.util.Arrays;
 import java.util.Collections;
 
-public class ProL1StringDescendingOutput {
+public class Programmers_L1_문자열내림차순출력 {
     public static void main(String[] args) {
-        L1StringDescendingOutputSol l1StringDescendingOutputSol = new L1StringDescendingOutputSol();
-        String result = l1StringDescendingOutputSol.solution("Zbcdefg");
+        Solution solution = new Solution();
+        String result = solution.solution("Zbcdefg");
         System.out.println(result);
     }
 }
 
-class L1StringDescendingOutputSol{
+class Solution{
     public String solution(String s) {
         String[] arrayWord = s.split("");
 

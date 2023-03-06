@@ -1,4 +1,4 @@
-package _UnsolvedProblem;
+package BOJ.Implementation;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
