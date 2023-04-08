@@ -1,4 +1,4 @@
-package Programers.lv2.JadenCase문자열만들기;
+package Programers.lv2._notion.JadenCase문자열만들기;
 
 public class Programmers_L2_JadenCase문자열만들기 {
 	public static void main(String[] args) {

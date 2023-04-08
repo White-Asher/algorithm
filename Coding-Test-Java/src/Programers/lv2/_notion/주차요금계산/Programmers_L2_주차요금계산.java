@@ -1,7 +1,7 @@
-package Programers.lv2.주차요금계산;
+package Programers.lv2._notion.주차요금계산;
 
 import java.util.*;
-import java.io.*;
+
 public class Programmers_L2_주차요금계산 {
     public static void main(String[] args) {
         Solution solution = new Solution();

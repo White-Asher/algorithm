@@ -1,6 +1,6 @@
 // 프로그래머스 L1 -  시저암호
 
-package Programers.lv1.시저암호;
+package Programers.lv1._notion.시저암호;
 
 public class Programmers_L1_시저암호 {
     public static void main(String[] args) {

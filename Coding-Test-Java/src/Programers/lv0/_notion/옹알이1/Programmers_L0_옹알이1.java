@@ -1,4 +1,4 @@
-package Programers.lv0.옹알이1;
+package Programers.lv0._notion.옹알이1;
 
 public class Programmers_L0_옹알이1 {
     public static void main(String[] args) {

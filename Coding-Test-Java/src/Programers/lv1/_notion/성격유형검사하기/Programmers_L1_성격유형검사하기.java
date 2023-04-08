@@ -1,4 +1,4 @@
-package Programers.lv1.성격유형검사하기;
+package Programers.lv1._notion.성격유형검사하기;
 
 import java.util.HashMap;
 import java.util.Map;

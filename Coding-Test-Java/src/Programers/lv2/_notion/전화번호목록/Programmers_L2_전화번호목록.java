@@ -1,4 +1,4 @@
-package Programers.lv2.전화번호목록;
+package Programers.lv2._notion.전화번호목록;
 
 import java.util.HashMap;
 import java.util.Map;

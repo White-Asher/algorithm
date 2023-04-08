@@ -1,11 +1,11 @@
 // 프로그래머스 L1 - 문자열 내림차순 출력
 
-package Programers.lv1.문자열내림차순출력;
+package Programers.lv1._notion.문자열내림차순으로배치하기;
 
 import java.util.Arrays;
 import java.util.Collections;
 
-public class Programmers_L1_문자열내림차순출력 {
+public class Programmers_L1_문자열내림차순으로배치하기 {
     public static void main(String[] args) {
         Solution solution = new Solution();
         String result = solution.solution("Zbcdefg");
