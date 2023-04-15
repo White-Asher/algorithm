@@ -1,4 +1,4 @@
-package _temp.BOJ_2467_용액;
+package BOJ.TwoPointer.BOJ_2467_용액;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,24 +18,25 @@ public class BOJ_2467_용액 {
         }
 
         long result = Long.MAX_VALUE;
-        long sum = 0 ;
         int start = 0;
         int end = N-1;
-        long rs = 0;
-        long re = 0;
+        int rs = 0;
+        int re = 0;
 
         while (start < end) {
-            sum = Math.abs(arr[start] + arr[end]);
+            long sum = Math.abs(arr[start] + arr[end]);
             if (sum < result) {
                 result = sum;
-                rs = arr[start];
-                re = arr[end];
+                rs = start;
+                re = end;
+            }
+            if (arr[start] + arr[end] > 0){
                 end--;
             } else {
-                end--;
+                start++;
             }
         }
 
-        System.out.println(rs + " "+re);
+        System.out.println(arr[rs] + " "+ arr[re]);
     }
 }
