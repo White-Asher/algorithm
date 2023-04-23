@@ -1,4 +1,4 @@
-package BOJ.DP;
+package _UnsolvedProblem.BOJ_12852_1로만들기2;
 
 import java.util.Scanner;
 

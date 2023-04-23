@@ -1,4 +1,4 @@
-package BOJ.DP;
+package BOJ.DP.BOJ_1463_1로만들기;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

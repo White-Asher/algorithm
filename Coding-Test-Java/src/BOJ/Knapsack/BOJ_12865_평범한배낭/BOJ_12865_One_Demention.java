@@ -1,11 +1,11 @@
-package BOJ.DP;
+package BOJ.Knapsack.BOJ_12865_평범한배낭;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BOJ_12865_Two_Demention {
+public class BOJ_12865_One_Demention {
 	static StringTokenizer st;
 	
 	public static void main(String[] args) throws IOException {
@@ -14,7 +14,7 @@ public class BOJ_12865_Two_Demention {
 		int N = Integer.parseInt(st.nextToken());
 		int K = Integer.parseInt(st.nextToken());
 		int max = Math.max(N,K);
-		int[][] dp = new int[N+1][K+1];
+		int[] dp = new int[max+1];
 		int[] W = new int[N+1]; // 무게
 		int[] V = new int[K+1]; // 가치
 		
@@ -25,16 +25,14 @@ public class BOJ_12865_Two_Demention {
 		}
 		
 		for (int i = 1; i <= N; i++) { // 물건 1-N
-			for (int j = 1; j <= K; j++) { // 배낭 용량 1-K
-
-				// 물건 i의 무게가 배낭의 임시 용량을 초과하면 
-				if(W[i] > j)
-					dp[i][j] = dp[i-1][j]; // 물건 i-1까지만 담음
-				else 
-					dp[i][j] = Math.max(dp[i-1][j], dp[i-1][j - W[i]] + V[i]);
+			for (int j = K; j >= 1; j--) { // 배낭 용량 1-K
+				if(W[i] <= j) {
+					dp[j] = Math.max(dp[j], dp[j - W[i]] + V[i]);
+				}
+			
 			}	
 		}
-		System.out.println(dp[N][K]);
+		System.out.println(dp[K]);
 		
 	}
 }

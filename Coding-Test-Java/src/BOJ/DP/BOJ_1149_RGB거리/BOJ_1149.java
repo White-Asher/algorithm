@@ -1,4 +1,4 @@
-package BOJ.DP;
+package BOJ.DP.BOJ_1149_RGB거리;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package BOJ.DP;
+package BOJ.DP.BOJ_2839_설탕배달;
 
 import java.io.BufferedReader;
 import java.io.IOException;
