@@ -1,35 +1,40 @@
 package _UnsolvedProblem.BOJ_12852_1로만들기2;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class BOJ_12852_1로만들기2 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
-        int[] dp = new int[N+1];
-        Arrays.fill(dp, Integer.MAX_VALUE);
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
 
-        dp[N] = 0;
-        while(N != 1) {
-            // 3으로 나눌 수 있으면 나눔
-            if (N % 3 == 0 && N > 3){
-                int a = N;
-                N /= 3;
-                dp[N] = Math.min(dp[N], dp[a] + 1);
-            } else if (N % 2 == 0 && N > 2) {
-                int a = N;
-                N /= 2;
-                dp[N] = Math.min(dp[N], dp[a] + 1);
-            } else {
-                int a = N;
-                N -= 1;
-                dp[N] = Math.min(dp[N], dp[a] + 1);
+        int[] dp = new int[N + 1]; //최소 횟수 저장
+        int[] path = new int[N + 1]; //경로 저장
+
+        String str = "";
+
+        dp[1] = 0;
+
+        for(int i = 2; i <= N; i++) {
+            dp[i] = dp[i - 1] + 1;
+            path[i] = i - 1;
+
+            if (i % 3 == 0 && dp[i / 3] + 1 < dp[i]) {
+                dp[i] = dp[i / 3] + 1;
+                path[i] = i / 3;
+            }
+            if (i % 2 == 0 && dp[i / 2] + 1 < dp[i]) {
+                dp[i] = dp[i / 2] + 1;
+                path[i] = i / 2;
             }
         }
-        System.out.println(Arrays.toString(dp));
-        System.out.println(dp[1]);
+        System.out.println(dp[N]);
+
+        while(N > 0){
+            str += N + " ";
+            N = path[N];
+        }
+
+        System.out.print(str);
+
     }
 }
