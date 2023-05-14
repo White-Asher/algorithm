@@ -8,41 +8,43 @@ import java.io.OutputStreamWriter;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class BOJ_15654 {
+public class BOJ_15657_NM8 {
 	static int N, R;
-	static int[] nums, inputs;
+	static int[] inputs, nums;
 	static StringTokenizer st;
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		st = new StringTokenizer(br.readLine());
+		
 		N = Integer.parseInt(st.nextToken());
 		R = Integer.parseInt(st.nextToken());
-		nums = new int[R];
+		
 		inputs = new int[N];
-
+		nums = new int[R];
 		
 		st = new StringTokenizer(br.readLine());
-		for (int i = 0; i < N; i++) inputs[i] = Integer.parseInt(st.nextToken());
-		Arrays.sort(inputs);		
-		perm(0, 0);
+		for (int i = 0; i < N; i++) {
+			inputs[i] = Integer.parseInt(st.nextToken());
+		}
+		Arrays.sort(inputs);
+		comb(0,0);
 		bw.flush();
 		bw.close();
 	}
 	
-	public static void perm(int cnt, int flag) throws IOException {
+	public static void comb(int cnt, int start) throws IOException {
 		if(cnt == R) {
 			for (int i : nums) {
-				bw.write(i+" ");
+				bw.write(i + " ");
 			}
 			bw.write("\n");
 			return;
 		}
 		
-		for (int i = 0; i < N; i++) {
-			if((flag & 1 << i) != 0) continue;
+		for (int i = start; i < N; i++) {
 			nums[cnt] = inputs[i];
-			perm(cnt+1, flag | 1 << i);
+			comb(cnt+1, i);
 		}
 		
 	}

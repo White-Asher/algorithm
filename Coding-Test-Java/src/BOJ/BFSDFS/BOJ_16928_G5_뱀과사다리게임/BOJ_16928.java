@@ -1,4 +1,4 @@
-package _UnderstandNOT.BOJ_16928_G5_뱀과사다리게임;
+package BOJ.BFSDFS.BOJ_16928_G5_뱀과사다리게임;
 
 import java.io.BufferedReader;
 import java.io.IOException;

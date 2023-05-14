@@ -3,7 +3,7 @@ package BOJ.NandM;
 import java.util.Scanner;
 
 // 1부터 N까지 자연수 중에서 중복 없이 M개를 고른 수열
-public class BOJ_15649 {
+public class BOJ_15649_NM1 {
 	static int N, M;
 	static int[] nums;
 	static boolean[] check;

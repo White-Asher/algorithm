@@ -17,7 +17,7 @@ public class PermutationBitmask {
 		
 		for (int i = 0; i < N; i++) input[i] = sc.nextInt();
 		permutationBitmask(0, 0);
-		System.out.println(totalCnt);
+		System.out.println("totalCnt : " + totalCnt);
 	}
 	
 	public static void permutationBitmask(int cnt, int flag) {

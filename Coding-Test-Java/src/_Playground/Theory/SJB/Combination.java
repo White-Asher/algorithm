@@ -1,12 +1,11 @@
 package _Playground.Theory.SJB;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
+import java.io.*;
 
-public class CombinationTest {
+public class Combination {
 	static int N, R, totalCnt;
-	static int[] nums;
-	static int[] inputs;
+	static int[] nums, inputs;
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -21,6 +20,7 @@ public class CombinationTest {
 		}
 		
 		combination(0, 0);
+		System.out.println("totalCnt : " + totalCnt);
 	}
 	
 	public static void combination(int cnt, int start) {
@@ -30,9 +30,28 @@ public class CombinationTest {
 			return;
 		}
 		
-		for(int i = start; i< N; i++) {
+		for(int i = start; i < N; i++) {
 			nums[cnt] = inputs[i];
 			combination(cnt+1, i+1);
 		}
 	}
 }
+
+/*
+input
+5 3
+1 2 3 4 5
+
+output
+[1, 2, 3]
+[1, 2, 4]
+[1, 2, 5]
+[1, 3, 4]
+[1, 3, 5]
+[1, 4, 5]
+[2, 3, 4]
+[2, 3, 5]
+[2, 4, 5]
+[3, 4, 5]
+totalCnt : 10
+*/

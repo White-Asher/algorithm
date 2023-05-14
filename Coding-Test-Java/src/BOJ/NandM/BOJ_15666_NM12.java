@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class BOJ_15666 {
+public class BOJ_15666_NM12 {
 	static int N, R, inputLenght;
 	static int[] input;
 	static int[] nums;

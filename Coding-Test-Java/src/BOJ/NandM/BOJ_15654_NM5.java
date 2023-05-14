@@ -6,56 +6,44 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.Arrays;
-import java.util.LinkedHashSet;
 import java.util.StringTokenizer;
 
-public class BOJ_15663 {
+public class BOJ_15654_NM5 {
 	static int N, R;
-	static int[] inputs, nums;
+	static int[] nums, inputs;
 	static StringTokenizer st;
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-	static LinkedHashSet<String> set;
-	static StringBuilder sb;
-	
 	public static void main(String[] args) throws Exception {
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		st = new StringTokenizer(br.readLine());
-		
 		N = Integer.parseInt(st.nextToken());
 		R = Integer.parseInt(st.nextToken());
-		
-		inputs = new int[N];
 		nums = new int[R];
+		inputs = new int[N];
+
 		
 		st = new StringTokenizer(br.readLine());
-		set = new LinkedHashSet<>();
 		for (int i = 0; i < N; i++) inputs[i] = Integer.parseInt(st.nextToken());
-		Arrays.sort(inputs);
-		
-		permutation(0, 0);
-		for (String s : set) {
-			bw.write(s);
-		}
+		Arrays.sort(inputs);		
+		perm(0, 0);
 		bw.flush();
 		bw.close();
 	}
 	
-	public static void permutation(int cnt, int flag) throws IOException {
+	public static void perm(int cnt, int flag) throws IOException {
 		if(cnt == R) {
-			sb = new StringBuilder();
 			for (int i : nums) {
-				sb.append(i).append(" ");
+				bw.write(i+" ");
 			}
-			sb.append("\n");
-			set.add(sb.toString());
+			bw.write("\n");
 			return;
 		}
 		
 		for (int i = 0; i < N; i++) {
-			if((flag & 1 << i)!= 0) continue;
+			if((flag & 1 << i) != 0) continue;
 			nums[cnt] = inputs[i];
-			permutation(cnt+1, flag|1<<i);
+			perm(cnt+1, flag | 1 << i);
 		}
+		
 	}
 }

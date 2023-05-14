@@ -18,7 +18,7 @@ public class SubsetTest {
 		}
 		
 		subset(0);
-		System.out.println("총 경우의 수 : "+ totalCnt);
+		System.out.println("totalCnt : " + totalCnt);
 	}
 	
 	// 매개변수에 카운트 보다는 인덱스 개념을 넣는게 더 좋아보인다! 

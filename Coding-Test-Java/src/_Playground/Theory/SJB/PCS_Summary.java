@@ -3,7 +3,7 @@ package _Playground.Theory.SJB;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class PCSTest {
+public class PCS_Summary {
 	
 	static int N, R, input[], numbers[];
 	static boolean[] isSelected;
