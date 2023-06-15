@@ -1,4 +1,4 @@
-package _UnsolvedProblem.BOJ_2608_로마숫자;
+package BOJ.String.BOJ_2608_로마숫자;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,8 +8,19 @@ public class BOJ_2608_로마숫자 {
     static String[] num;
     public static void main(String[] args) throws IOException {
         num = new String[1001];
-        num[1] = "I"; num[5] = "V"; num[10] = "X"; num[50] = "L"; num[100] = "C"; num[500] = "D"; num[1000] = "M";
-        num[4] = "IV"; num[9] = "IX"; num[90] = "XC"; num[400] = "CD"; num[900] = "CM";
+        num[1] = "I";
+        num[4] = "IV";
+        num[5] = "V";
+        num[9] = "IX";
+        num[10] = "X";
+        num[40] = "XL";
+        num[50] = "L";
+        num[90] = "XC";
+        num[100] = "C";
+        num[400] = "CD";
+        num[500] = "D";
+        num[900] = "CM";
+        num[1000] = "M";
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String a1 = br.readLine();
@@ -88,7 +99,6 @@ public class BOJ_2608_로마숫자 {
         }
         return num;
     }
-
     public static String re(String t) {
         t = t.replace("IV", "IIII");
         t = t.replace("IX", "VIIII");
@@ -101,10 +111,13 @@ public class BOJ_2608_로마숫자 {
 
     public static String er(String t) {
         t = t.replace("CCCCCCCCC", "CM");
+        t = t.replace("CCCCC", "D");
         t = t.replace("CCCC", "CD");
         t = t.replace("XXXXXXXXX", "XC");
+        t = t.replace("XXXXX", "L");
         t = t.replace("XXXX", "XL");
         t = t.replace("IIIIIIIII", "IX");
+        t = t.replace("IIIII", "V");
         t = t.replace("IIII", "IV");
         return t;
     }

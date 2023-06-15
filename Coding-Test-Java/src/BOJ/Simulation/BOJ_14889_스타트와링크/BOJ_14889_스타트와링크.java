@@ -1,4 +1,4 @@
-package BOJ.Bruteforce.BOJ_14889_스타트와링크;
+package BOJ.Simulation.BOJ_14889_스타트와링크;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
