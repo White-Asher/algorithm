@@ -1,4 +1,4 @@
-package _UnsolvedProblem.BOJ_2579_계단오르기;
+package BOJ.DP.BOJ_2579_S3_계단오르기;
 
 import java.io.BufferedReader;
 import java.io.IOException;
