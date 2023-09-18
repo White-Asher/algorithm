@@ -56,17 +56,16 @@ class Solution {
         for(String str : st2) {
             union.add(str);
         }
-        double temp = 1.0;
+        
         if(union.size() == 0){
             return 65536;
         }
         
         if(inter.size() == 0) {
             return 0;
-        } else if(inter.size() !=0 ){
-            temp = (double) inter.size()/ (double) union.size();
-        }
+        } 
         
+        double temp = (double) inter.size()/ (double) union.size();
         return (int) (temp * 65536);
     }
 }
