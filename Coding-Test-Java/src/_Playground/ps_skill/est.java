@@ -3,9 +3,9 @@ package _Playground.ps_skill;
 import java.util.*;
 import java.io.*;
 
-public class BufferedReaderTest {
+public class est {
     public static void main(String[] args) throws Exception {
-        BufferedReaderTest brTest = new BufferedReaderTest();
+        est brTest = new est();
 //        brTest.test01();
 //        brTest.test02();
 //        brTest.test03();
