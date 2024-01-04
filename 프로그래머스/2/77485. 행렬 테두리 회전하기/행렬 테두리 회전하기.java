@@ -1,3 +1,17 @@
+/*
+제목 : 행렬 테두리 회전하기
+알고리즘 유형 : #implementation
+플랫폼 : #Programmers
+난이도 : L2
+문제번호 : 77485
+시간 : 45m
+해결 : O
+저장 : X
+해결언어 : java
+문제링크 : https://school.programmers.co.kr/learn/courses/30/lessons/77485
+특이사항 : #2021-Dev_matching:-웹-백엔드-개발자(상반기) , #esalgo-week22
+*/
+
 import java.util.*;
 
 class Solution {
