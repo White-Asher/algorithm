@@ -8,7 +8,7 @@ class Solution {
         int r = 0;
         int m = 1000001;
         int s = 0;
-        
+    
         while(true) {
             if (s == k) {
                 if(r - l < m) {
@@ -27,10 +27,8 @@ class Solution {
             } else if (s < k) {
                 s+=a[r++];
             } 
-            // System.out.println("l : "+ l + " r : " + r + " s : " + s);
             
         }
-        
         return ans;
     }
 }
