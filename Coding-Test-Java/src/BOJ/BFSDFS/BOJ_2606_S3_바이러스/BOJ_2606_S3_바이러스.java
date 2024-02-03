@@ -1,3 +1,17 @@
+/*
+제목 : 바이러스
+알고리즘 유형 : #bfs
+플랫폼 : #BOJ
+난이도 : S3
+문제번호 : 2606
+시간 : -
+해결 : O
+저장 : X
+해결언어 : java
+문제링크 : https://www.acmicpc.net/problem/2606
+특이사항 : #
+*/
+
 package BOJ.BFSDFS.BOJ_2606_S3_바이러스;
 
 import java.io.*;
