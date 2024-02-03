@@ -23,7 +23,7 @@ public class BOJ_17404_G4_RGB거리2 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
         int[][] arr = new int[n+1][4];
-        int[][] dp = new int[n+1][4];
+        int[][] dp = new int[n+1][4]; // [집개수][컬러수]
 
         for (int i = 1; i <= n; i++) {
             st = new StringTokenizer(br.readLine());
@@ -34,8 +34,9 @@ public class BOJ_17404_G4_RGB거리2 {
 
         int min = Integer.MAX_VALUE;
 
-        // R, G, B 각각 시작
+        // 1번색의 집을 R, G, B로 각각 칠했을 때 구해야함.
         for(int c = 1; c <= 3; c++) {
+            // 두번째 집이 첫번째 집과 색이 같지 않아야 하니.
             for (int i = 1; i <= 3; i++) {
                 if(c == i) dp[1][i] = arr[1][i];
                 else dp[1][i] = 1000 * 1000;

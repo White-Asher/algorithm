@@ -9,7 +9,7 @@
 저장 : O
 해결언어 : java
 문제링크 : https://www.acmicpc.net/problem/2616
-특이사항 : esalgo-week21
+특이사항 : #esalgo-week21
 */
 
 package BOJ.DP.BOJ_2616_G3_소형기관차;
