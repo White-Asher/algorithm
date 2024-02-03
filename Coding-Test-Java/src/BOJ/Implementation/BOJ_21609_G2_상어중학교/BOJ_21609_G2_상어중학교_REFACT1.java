@@ -1,6 +1,6 @@
 /*
 제목 : 상어중학교
-알고리즘 유형 : #Implementaion
+알고리즘 유형 : #implementaion
 플랫폼 : #BOJ
 난이도 : G2
 문제번호 : 21609

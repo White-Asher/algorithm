@@ -1,6 +1,6 @@
 /*
 제목 : 스도쿠
-알고리즘 유형 : #Backtracking
+알고리즘 유형 : #backtracking
 플랫폼 : #BOJ
 난이도 : G4
 문제번호 : 2580
