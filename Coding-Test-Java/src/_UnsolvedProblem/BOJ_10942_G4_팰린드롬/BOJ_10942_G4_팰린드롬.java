@@ -1,4 +1,4 @@
-package BOJ.DP.BOJ_10942_G4_팰린드롬;
+package _UnsolvedProblem.BOJ_10942_G4_팰린드롬;
 
 import java.util.*;
 import java.io.*;

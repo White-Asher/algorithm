@@ -1,10 +1,24 @@
+/*
+제목 : 나무 자르기
+알고리즘 유형 : #binarysearch
+플랫폼 : #BOJ
+난이도 : S1
+문제번호 : 2805
+시간 : -
+해결 : O
+저장 : O
+해결언어 : java
+문제링크 : https://www.acmicpc.net/problem/2805
+특이사항 : #
+*/
+
 package BOJ.BinarySearch.BOJ_2805_나무자르기;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BOJ_2805_나무자르기 {
+public class BOJ_2805_S1_나무자르기 {
     static StringTokenizer st;
     public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

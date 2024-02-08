@@ -1,4 +1,4 @@
-package _UnsolvedProblem._0709.BOJ_1005_G5_ACM_CRAFT;
+package _UnsolvedProblem.BOJ_1005_G5_ACM_CRAFT;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

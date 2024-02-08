@@ -1,4 +1,4 @@
-package _UnsolvedProblem._0709.BOJ_11725_S2_트리의부모찾기;
+package _UnsolvedProblem.BOJ_11725_S2_트리의부모찾기;
 
 import java.util.*;
 import java.io.*;
