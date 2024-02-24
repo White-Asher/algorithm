@@ -18,13 +18,13 @@ class Solution {
             char command = cmd[i].charAt(0);
             switch(command) {
                 case 'U':
-                    cnt = Integer.parseInt(String.valueOf(cmd[i].substring(2)));
+                    cnt = Integer.parseInt(String.valueOf(cmd[i].charAt(2)));
                     for(int c = 0; c < cnt; c++) {
                         now = now.prev;
                     }
                     break;
                 case 'D':
-                    cnt = Integer.parseInt(String.valueOf(cmd[i].substring(2)));
+                    cnt = Integer.parseInt(String.valueOf(cmd[i].charAt(2)));
                     for(int c = 0; c < cnt; c++) {
                         now = now.next;
                     }
