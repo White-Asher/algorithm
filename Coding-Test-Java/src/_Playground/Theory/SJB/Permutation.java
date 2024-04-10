@@ -23,7 +23,7 @@ public class Permutation {
 		permutation(0);
 		System.out.println("totalCnt : " + totalCnt);
 	}
-	public static void permutation(int cnt) {
+	private static void permutation(int cnt) {
 		if(cnt == R) {
 			totalCnt++;
 			System.out.println(Arrays.toString(nums));
