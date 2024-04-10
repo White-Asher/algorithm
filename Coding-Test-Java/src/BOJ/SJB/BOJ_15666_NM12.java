@@ -1,4 +1,4 @@
-package BOJ.NandM;
+package BOJ.SJB;
 
 import java.util.Arrays;
 import java.util.HashSet;

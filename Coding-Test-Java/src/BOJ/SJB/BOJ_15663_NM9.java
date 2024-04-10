@@ -1,4 +1,4 @@
-package BOJ.NandM;
+package BOJ.SJB;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -6,14 +6,19 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.Arrays;
+import java.util.LinkedHashSet;
 import java.util.StringTokenizer;
 
-public class BOJ_15657_NM8 {
+public class BOJ_15663_NM9 {
 	static int N, R;
 	static int[] inputs, nums;
 	static StringTokenizer st;
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+	static LinkedHashSet<String> set;
+	static StringBuilder sb;
+	
 	public static void main(String[] args) throws Exception {
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		st = new StringTokenizer(br.readLine());
 		
@@ -24,28 +29,33 @@ public class BOJ_15657_NM8 {
 		nums = new int[R];
 		
 		st = new StringTokenizer(br.readLine());
-		for (int i = 0; i < N; i++) {
-			inputs[i] = Integer.parseInt(st.nextToken());
-		}
+		set = new LinkedHashSet<>();
+		for (int i = 0; i < N; i++) inputs[i] = Integer.parseInt(st.nextToken());
 		Arrays.sort(inputs);
-		comb(0,0);
+		
+		permutation(0, 0);
+		for (String s : set) {
+			bw.write(s);
+		}
 		bw.flush();
 		bw.close();
 	}
 	
-	public static void comb(int cnt, int start) throws IOException {
+	public static void permutation(int cnt, int flag) throws IOException {
 		if(cnt == R) {
+			sb = new StringBuilder();
 			for (int i : nums) {
-				bw.write(i + " ");
+				sb.append(i).append(" ");
 			}
-			bw.write("\n");
+			sb.append("\n");
+			set.add(sb.toString());
 			return;
 		}
 		
-		for (int i = start; i < N; i++) {
+		for (int i = 0; i < N; i++) {
+			if((flag & 1 << i)!= 0) continue;
 			nums[cnt] = inputs[i];
-			comb(cnt+1, i);
+			permutation(cnt+1, flag|1<<i);
 		}
-		
 	}
 }
