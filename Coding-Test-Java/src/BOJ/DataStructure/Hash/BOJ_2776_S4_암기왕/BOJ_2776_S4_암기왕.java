@@ -1,4 +1,4 @@
-package BOJ.Hash.BOJ_2776_S4_암기왕;
+package BOJ.DataStructure.Hash.BOJ_2776_S4_암기왕;
 
 import java.util.*;
 import java.io.*;

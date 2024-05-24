@@ -1,4 +1,4 @@
-package BOJ.Hash.BOJ_9322_S4_철벽보안알고리즘;
+package BOJ.DataStructure.Hash.BOJ_9322_S4_철벽보안알고리즘;
 
 import java.util.*;
 import java.io.*;

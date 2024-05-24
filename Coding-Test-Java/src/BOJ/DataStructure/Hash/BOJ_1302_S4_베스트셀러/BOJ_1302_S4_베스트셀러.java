@@ -1,4 +1,4 @@
-package BOJ.Hash.BOJ_1302_S4_베스트셀러;
+package BOJ.DataStructure.Hash.BOJ_1302_S4_베스트셀러;
 
 import java.util.*;
 import java.io.*;

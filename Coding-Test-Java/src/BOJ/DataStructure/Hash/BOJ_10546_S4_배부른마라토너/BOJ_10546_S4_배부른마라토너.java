@@ -1,4 +1,4 @@
-package BOJ.Hash.BOJ_10546_S4_배부른마라토너;
+package BOJ.DataStructure.Hash.BOJ_10546_S4_배부른마라토너;
 
 import java.util.*;
 import java.io.*;

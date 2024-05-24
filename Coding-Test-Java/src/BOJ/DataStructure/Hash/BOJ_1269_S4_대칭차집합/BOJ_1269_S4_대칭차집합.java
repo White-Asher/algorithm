@@ -1,4 +1,4 @@
-package BOJ.Hash.BOJ_1269_S4_대칭차집합;
+package BOJ.DataStructure.Hash.BOJ_1269_S4_대칭차집합;
 
 import java.io.*;
 import java.util.*;

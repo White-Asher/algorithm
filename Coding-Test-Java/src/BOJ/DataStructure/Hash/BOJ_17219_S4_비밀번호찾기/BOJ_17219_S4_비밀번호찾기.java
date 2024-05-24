@@ -1,4 +1,4 @@
-package BOJ.Hash.BOJ_17219_S4_비밀번호찾기;
+package BOJ.DataStructure.Hash.BOJ_17219_S4_비밀번호찾기;
 
 import java.util.*;
 import java.io.*;

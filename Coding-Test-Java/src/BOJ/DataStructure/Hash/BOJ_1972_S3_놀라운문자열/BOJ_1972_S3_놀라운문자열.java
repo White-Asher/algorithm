@@ -1,4 +1,4 @@
-package BOJ.Hash.BOJ_1972_S3_놀라운문자열;
+package BOJ.DataStructure.Hash.BOJ_1972_S3_놀라운문자열;
 
 import java.util.*;
 import java.io.*;

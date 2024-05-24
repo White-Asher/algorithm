@@ -1,4 +1,4 @@
-package BOJ.Hash.BOJ_7785_S5_회사에있는사람;
+package BOJ.DataStructure.Hash.BOJ_7785_S5_회사에있는사람;
 
 import java.io.*;
 import java.util.*;

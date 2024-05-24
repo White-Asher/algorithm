@@ -1,4 +1,4 @@
-package BOJ.Hash.BOJ_10816_S4_숫자카드2;
+package BOJ.DataStructure.Hash.BOJ_10816_S4_숫자카드2;
 
 import java.util.*;
 import java.io.*;

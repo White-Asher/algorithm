@@ -1,4 +1,4 @@
-package BOJ.Hash.BOJ_9375_S3_패션왕신해빈;
+package BOJ.DataStructure.Hash.BOJ_9375_S3_패션왕신해빈;
 
 import java.util.*;
 import java.io.*;

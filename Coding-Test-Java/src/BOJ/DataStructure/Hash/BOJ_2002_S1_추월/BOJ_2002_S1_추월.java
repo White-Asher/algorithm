@@ -1,4 +1,4 @@
-package BOJ.Hash.BOJ_2002_S1_추월;
+package BOJ.DataStructure.Hash.BOJ_2002_S1_추월;
 
 import java.util.*;
 import java.io.*;

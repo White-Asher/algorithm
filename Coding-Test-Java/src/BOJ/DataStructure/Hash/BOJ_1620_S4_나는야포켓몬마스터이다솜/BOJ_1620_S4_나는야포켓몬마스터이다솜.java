@@ -1,4 +1,4 @@
-package BOJ.Hash.BOJ_1620_S4_나는야포켓몬마스터이다솜;
+package BOJ.DataStructure.Hash.BOJ_1620_S4_나는야포켓몬마스터이다솜;
 
 import java.util.*;
 import java.io.*;
