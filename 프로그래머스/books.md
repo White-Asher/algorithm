@@ -20,3 +20,10 @@
 - [쿼드압축 후 개수 세기](https://school.programmers.co.kr/learn/courses/30/lessons/68936) - Level 2 |
 - [하노이의 탑](https://school.programmers.co.kr/learn/courses/30/lessons/12946) - Level 3 |
 - [모음 사전](https://school.programmers.co.kr/learn/courses/30/lessons/84512) - Level 2 |
+
+6장
+- 모의고사 – Level 1 | 
+- 카펫 – Level 2 |
+- 수식 최대화 - Level 2 |
+- 소수 찾기 – Level 2 | 
+- 불량 사용자 - Level 3 | 
