@@ -17,4 +17,6 @@
 - [신규 아이디 추천](https://school.programmers.co.kr/learn/courses/30/lessons/72410) - Level 1 | X
 
 5장
-- []()
+- [쿼드압축 후 개수 세기](https://school.programmers.co.kr/learn/courses/30/lessons/68936) - Level 2 |
+- [하노이의 탑](https://school.programmers.co.kr/learn/courses/30/lessons/12946) - Level 3 |
+- [모음 사전](https://school.programmers.co.kr/learn/courses/30/lessons/84512) - Level 2 |
