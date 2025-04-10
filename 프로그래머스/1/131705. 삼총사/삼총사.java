@@ -1,3 +1,17 @@
+/*
+제목 : 삼총사
+알고리즘 유형 : 
+플랫폼 : #Programmers
+난이도 : L1
+문제번호 : 131705
+시간 : 5
+해결 : O
+저장 : X
+해결언어 : java
+문제링크 : https://school.programmers.co.kr/learn/courses/30/lessons/131705
+특이사항 : X
+*/
+
 import java.util.*;
 
 class Solution {
