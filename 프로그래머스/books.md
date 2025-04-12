@@ -17,13 +17,13 @@
 - [신규 아이디 추천](https://school.programmers.co.kr/learn/courses/30/lessons/72410) - Level 1 | X
 
 5장
-- [쿼드압축 후 개수 세기](https://school.programmers.co.kr/learn/courses/30/lessons/68936) - Level 2 |
-- [하노이의 탑](https://school.programmers.co.kr/learn/courses/30/lessons/12946) - Level 3 |
-- [모음 사전](https://school.programmers.co.kr/learn/courses/30/lessons/84512) - Level 2 |
+- [쿼드압축 후 개수 세기](https://school.programmers.co.kr/learn/courses/30/lessons/68936) - Level 2 | X
+- [하노이의 탑](https://school.programmers.co.kr/learn/courses/30/lessons/12946) - Level 3 | X
+- [모음 사전](https://school.programmers.co.kr/learn/courses/30/lessons/84512) - Level 2 | X
 
 6장
-- 모의고사 – Level 1 | 
-- 카펫 – Level 2 |
-- 수식 최대화 - Level 2 |
-- 소수 찾기 – Level 2 | 
-- 불량 사용자 - Level 3 | 
+- [모의고사](https://school.programmers.co.kr/learn/courses/30/lessons/42840) – Level 1 | 
+- [카펫](https://school.programmers.co.kr/learn/courses/30/lessons/42842) – Level 2 |
+- [수식 최대화](https://school.programmers.co.kr/learn/courses/30/lessons/67257) - Level 2 |
+- [소수 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/42839) – Level 2 | 
+- [불량 사용자](https://school.programmers.co.kr/learn/courses/30/lessons/64064) - Level 3 | 
