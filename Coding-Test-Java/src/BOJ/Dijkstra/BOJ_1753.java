@@ -27,7 +27,7 @@ public class BOJ_1753 {
 	static ArrayList<Node>[] list;
 	static StringTokenizer st;
 	static StringBuilder sb = new StringBuilder();
-	
+
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		input();
 		Dijkstra();
