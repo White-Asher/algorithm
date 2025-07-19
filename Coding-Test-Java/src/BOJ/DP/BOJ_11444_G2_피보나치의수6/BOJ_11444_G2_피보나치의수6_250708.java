@@ -1,6 +1,5 @@
-package BOJ.BOJ_11444_G2_피보나치의수6;
+package BOJ.DP.BOJ_11444_G2_피보나치의수6;
 
-import java.util.*;
 import java.io.*;
 
 public class BOJ_11444_G2_피보나치의수6_250708 {
