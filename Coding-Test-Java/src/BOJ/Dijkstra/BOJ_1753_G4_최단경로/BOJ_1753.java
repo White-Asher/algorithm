@@ -1,4 +1,4 @@
-package BOJ.Dijkstra;
+package BOJ.Dijkstra.BOJ_1753_G4_최단경로;
 
 import java.io.BufferedReader;
 import java.io.IOException;
