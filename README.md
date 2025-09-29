@@ -5,13 +5,6 @@
 [![Solved.ac
 프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=protoss1111)](https://solved.ac/protoss1111)
 
-
-## Algorithm
-- [BFS/DFS](https://whitehairhan.tistory.com/204?category=1000781) 
-- [DP](https://whitehairhan.tistory.com/266?category=1000781)
-- [Prefix sum(누적 합)](https://whitehairhan.tistory.com/323?category=1000781)
-- [Palindrome(회문)](https://whitehairhan.tistory.com/327?category=1000781)
-
 ## PS
 
 | 번호 | 주제 |
@@ -45,4 +38,5 @@
 | 0x1A | [위상 정렬](workbook/0x1A.md) |
 | 0x1B | [최소 신장 트리](workbook/0x1B.md) |
 | 0x1C | [플로이드 알고리즘](workbook/0x1C.md) |
+
 | 0x1D | [다익스트라 알고리즘](workbook/0x1D.md) |
